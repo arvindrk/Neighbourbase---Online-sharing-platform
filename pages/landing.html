@@ -1,0 +1,193 @@
+<div id="wrapper" ng-init="init_modal()">
+	<div class="container-fluid">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->			
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="container-fluid"> 
+						<div class="col-md-12 col-sm-10">
+							<a class="navbar-brand" href="#" style="font-size:2.4em">Sha<span style="color:red;">re</span>ligion</a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav_font" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">        
+						<li class="nav_hover" ng-class="{active: home}"><a href="" smooth-scroll target="home" offset="70" ng-click="setActive(0)">Home</a></li>
+						<li class="nav_hover" ng-class="{active: howitworks}"><a href="" smooth-scroll target="how" offset="70" ng-click="setActive(7)">How it works?</a></li>
+						<li class="nav_hover" ng-class="{active: about}"><a href="" smooth-scroll target="about" offset="70" ng-click="setActive(1)">About Us</a></li>
+						<li class="nav_hover" ng-class="{active: contact}"><a  href="" smooth-scroll target="contact" offset="70" ng-click="setActive(2)">Contact Us</a></li>
+						<li class="nav_hover"><a href="/pages/profile.html">Profile</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="nav_hover" ng-class="{active: sign}"><a href="" ng-click="setActive(5)" data-toggle="modal" data-target=".bs-example-modal-sm">Sign Up</a></li>
+						<li class="nav_hover" ng-class="{active: login}"><a href="" ng-click="setActive(4)" data-toggle="modal" data-target=".bs-example-modal-sm">Log In</a></li>
+						<li class="nav_hover" ng-class="{active: help}"><a href="" smooth-scroll target="help" offset="70" ng-click="setActive(3)">Help</a></li>
+						<li class="nav_hover" ng-class="{active: listing}"><a href="listing.html" ng-click="setActive(6)">Listings</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>
+		</nav>
+	</div><!-- /.container-fluid -->
+	<br><br><br>
+	<div id="home">
+		<div class="row" align="center">
+			<homebuttons smooth-scroll target="how" offset="70" ng-click="setActive(7)">How it Works?</homebuttons>
+			<homebuttons  data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="setActive(5)">Sign Up for free</homebuttons>
+		</div>
+		<br><br><br><br><br>
+	</div>
+	<div id="how">
+		<p class="text-center content_head">How does it works?</p>
+		<hr>
+		<div class="row content_body" align="center">
+			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+				<p>What would you like to do?
+					<span class="button1" ng-click="flip(0)">Borrow/Rent/Buy</span>
+					Or
+					<span class="button1"ng-click="flip(1)">Lend/Rent/Sell</span>
+				</p>
+			</div>
+		</div>
+		<br><br><br><br><br>
+		<div class="row content_body" align="center" ng-init="borrow=true;">
+			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<img class="responsive hover_up" src="img/signup.png" height="100" width="200" alt="Sign Up">
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+				<span ng-show="borrow">
+					<img class="responsive1 hover_up" src="img/client.png" height="130" width="140">
+				</span>
+				<span ng-show="lend">
+					<img class="responsive1 hover_up lend" src="img/Add listing.png" height="130" width="140">
+				</span>
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+				<span ng-show="borrow">
+					<img class="responsive hover_up" src="img/Request button.png" height="100" width="200">
+				</span>
+				<span ng-show="lend">
+					<img class="responsive hover_up1 lend1" src="img/Recieve request.png" height="100" width="200">
+				</span>
+				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+				<img class="responsive hover_up" src="img/peace.png" height="200" width="200"/>
+				<br><br>
+				<span class="main_button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="setActive(5)">Get Started Now!</span>
+				<br><br><br><br><br>
+			</div>
+		</div>
+	</div>
+	<div id="about">
+		<p class="text-center content_head">About Us</p>
+		<hr>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<div id="contact">
+		<p class="text-center content_head">Contact Us</p>
+		<hr>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<div id="help">
+		<p class="text-center content_head">Help</p>
+		<hr>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<footer>
+		<div class="foot"> 
+			<div align="center"><br><h2>Join Us!</h2>
+				<li><img src="icons/fb.ico" height="35px" width="35px" data-toggle="tooltip" data-placement="top" title="Facebook"></li>
+				<li><img src="icons/twitter.ico" height="35px" width="35px" data-toggle="tooltip" data-placement="top" title="Twitter"></li>
+				<li><img src="icons/pintrest.ico" height="35px" width="35px" data-toggle="tooltip" data-placement="top" title="Pintrest"></li>
+				<li><img src="icons/gplus.png" height="35px" width="35px" data-toggle="tooltip" data-placement="top" title="Google+"></li>
+				<li><img src="icons/utube.png" height="35px" width="35px" data-toggle="tooltip" data-placement="top" title="YouTube"></li>
+			</div>
+			<br>
+		</div>
+	</footer>
+</div>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" ng-style="modalStyle">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title text-center" id="myModalLabel">
+					<div ng-show="signup">Sign Up</div>
+					<div ng-show="login_modal">Log In</div>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div ng-show="signup">
+					<fbButton>
+						<span class="social_icon">
+							<i class="icon-facebook" align="left"></i> 
+						</span> 
+						Sign Up with Facebook
+					</fbButton>
+					<googleButton>
+						<span class="social_icon">
+							<i class="icon-google-plus" align="left"></i>
+						</span>
+						Sign up with Google+
+					</googleButton>
+					<div class="row text-center">
+						<h6 class="signup-or-separator">or</h6>
+					</div>
+					<hr class="hr_pullup">
+					<emailButton>
+						<span class="social_icon">
+							<i class="icon-envelope-alt" align="left"></i>
+						</span>
+						Sign in with Email
+					</emailButton>
+				</div>
+				<div ng-show="login_modal">
+					<fbButton>
+						<span class="social_icon">
+							<i class="icon-facebook" align="left"></i> 
+						</span> 
+						Log in with Facebook
+					</fbButton>
+					<googleButton>
+						<span class="social_icon">
+							<i class="icon-google-plus" align="left"></i>
+						</span>
+						Log in with Google+
+					</googleButton>
+					<div class="row text-center">
+						<h6 class="signup-or-separator">or</h6>
+					</div>
+					<hr class="hr_pullup">
+					<form>
+						<div class="inner-addon right-addon">
+							<i class="glyphicon glyphicon-envelope"></i>
+							<input type="email" class="form-control" placeholder="Email" autofocus>
+						</div>
+						<br>
+						<div class="inner-addon right-addon">
+							<i class="glyphicon glyphicon-lock"></i>
+							<input type="password" class="form-control" placeholder="Password">
+						</div>
+						<div class="row rememberme">
+							<input type="checkbox"> Remember me
+							<a class="pull-right" href="">Forgot Password?</a>
+						</div>
+						<emailButton class="text-center">Log In</emailButton>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div ng-show="signup">
+					Already a member? <a href="" ng-click="setActive(4)">Login</a>
+				</div>
+				<div ng-show="login_modal">
+					Don't have an Account? <a href="" ng-click="setActive(5)">Sign Up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
